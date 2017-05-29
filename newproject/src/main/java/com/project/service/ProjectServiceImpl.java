@@ -23,7 +23,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 
       List<Project> projects=new ArrayList<>();
 	  projectDao.findAll().forEach(projects::add);
-	  return projects;
+	  return projects; 
 	  
 	}
   
