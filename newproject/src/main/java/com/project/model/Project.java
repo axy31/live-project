@@ -27,7 +27,7 @@ public class Project {
   private String EndDate;
   private Integer EstimateDate;
   
-  
+   
   // ------------------------
   // PUBLIC METHODS
   // ------------------------
