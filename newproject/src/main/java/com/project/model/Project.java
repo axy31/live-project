@@ -25,8 +25,10 @@ public class Project {
   private String Station;
   private String StartDate;
   private String EndDate;
-  private Integer EstimateDate;
-  
+  private Integer EstimatePeriod;
+  private Integer PlotSize;
+  private Integer NumberOfFlats;
+  private Integer NumberOfFloors;
    
   // ------------------------
   // PUBLIC METHODS
@@ -42,12 +44,43 @@ public class Project {
 
   // Getter and setter methods
 
-  public Project(String projectName, String station, String startDate, String endDate, int estimateDate) {
+  public Project(String projectName, String station, String startDate, String endDate, int estimatePeriod,int plotSize, int numberOfFlats, int numberOfFloors) {
 	 this.ProjectName=projectName;
 	 this.Station=station;
 	 this.StartDate=startDate;
 	 this.EndDate=endDate;
-	 this.EstimateDate=estimateDate;
+	 this.EstimatePeriod=estimatePeriod;
+     this.PlotSize = plotSize;
+	 this.NumberOfFlats = numberOfFlats;
+     this.NumberOfFloors = numberOfFloors;
+}
+  
+  
+
+ 
+
+public Integer getPlotSize() {
+	return PlotSize;
+}
+
+public void setPlotSize(Integer plotSize) {
+	PlotSize = plotSize;
+}
+
+public Integer getNumberOfFlats() {
+	return NumberOfFlats;
+}
+
+public void setNumberOfFlats(Integer numberOfFlats) {
+	NumberOfFlats = numberOfFlats;
+}
+
+public Integer getNumberOfFloors() {
+	return NumberOfFloors;
+}
+
+public void setNumberOfFloors(Integer numberOfFloors) {
+	NumberOfFloors = numberOfFloors;
 }
 
 public Long getId() {
@@ -91,12 +124,12 @@ public void setEndDate(String endDate) {
 	this.EndDate = endDate;
 }
 
-public Integer getEstimateDate() {
-	return EstimateDate;
+public Integer getEstimatePeriod() {
+	return EstimatePeriod;
 }
 
-public void setEstimateDate(int estimateDate) {
-	this.EstimateDate = estimateDate;
+public void setEstimatePeriod(int estimatePeriod) {
+	this.EstimatePeriod = estimatePeriod;
 }
   
 
