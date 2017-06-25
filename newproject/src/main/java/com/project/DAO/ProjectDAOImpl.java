@@ -1,6 +1,5 @@
 package com.project.DAO;
-
-import org.springframework.data.jpa.repository.Query;
+ 
 import org.springframework.data.repository.CrudRepository;
 
 import com.project.model.Project;

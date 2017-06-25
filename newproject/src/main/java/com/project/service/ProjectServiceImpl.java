@@ -35,21 +35,50 @@ public class ProjectServiceImpl implements ProjectService {
 	  
   }
 	
-	public String create(Project project1) {
-		   Project project = project1;
-		   System.out.println(project);
-		    try {
-		     
-		     System.out.println("This output before project save : "+project.getProjectName());
-		     projectDao.save(project);
-		     System.out.println("This output after project save : "+project.getProjectName());
-		     
-		    }
-		    catch (Exception ex) { 
-		      return "Error creating the user: " + ex.toString();
-		    }
-		    return "User succesfully created! (id = " + project.getId() + ")";
-		  } 
-	
-	
+  public List<Project> create(Project project1) {
+	   Project project = project1;
+	   List <Project> projects=new ArrayList<>();
+	   projects.add(project1);
+	   System.out.println(project);
+	    try {
+	     
+	     System.out.println("This output before project save : "+project.getProjectName());
+	     projectDao.save(project);
+	     System.out.println("This output after project save : "+project.getProjectName());
+	     
+	    }
+	    catch (Exception ex) { 
+	      System.out.println("Error creating the user: " + ex.toString());
+	    }
+	    System.out.println( "User succesfully created! (id = " + project.getProjectId() + ")");
+	    return  projects;
+	  } 
+
+  public List<Project> update(Project project1) {
+	   Project project = project1;
+	   List <Project> projects=new ArrayList<>();
+	   projects.add(project1);
+	   System.out.println(project);
+	    try {
+	     
+	     System.out.println("This output before project save : "+project.getProjectName());
+	     projectDao.save(project);
+	     System.out.println("This output after project save : "+project.getProjectName());
+	     
+	    }
+	    catch (Exception ex) { 
+	      System.out.println("Error creating the user: " + ex.toString());
+	    }
+	    System.out.println( "User succesfully created! (id = " + project.getProjectId() + ")");
+	    return  projects;
+	  } 
+  
+  public List<Project> delete(Long pid) {
+	  
+	  List<Project> projects=new ArrayList<>();
+	  projects.add(projectDao.findOne(pid));
+	  projectDao.delete(pid);
+	  return projects; 
+  }
+
 }

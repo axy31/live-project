@@ -8,7 +8,7 @@ public interface ProjectService {
 
 	
 	String index();
-	public String create(Project project1);
+	public List<Project> create(Project project1);
 	public List<Project> getAll();
 	public Project findByProjectName(String ProjectName);
 }
