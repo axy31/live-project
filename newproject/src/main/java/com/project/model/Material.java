@@ -42,7 +42,7 @@ public class Material {
     
     
     
-    public Material(Long MaterialId, String MaterialNmae, String MaterialDescription, String MaterialCategory, String UnitOfMesurement) {
+    public Material(Long MaterialId, String MaterialName, String MaterialDescription, String MaterialCategory, String UnitOfMesurement) {
         this.MaterialId = MaterialId;
         this.MaterialName = MaterialName;
         this.MaterialDescription = MaterialDescription;

@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 
@@ -156,6 +157,21 @@ public MaterialTransaction() {
 		this.place = place;
 	}
 
+	@JsonProperty
+	public Long getProjectId() {
+	    return projects == null ? null : projects.getProjectId();
+	}
+	
+
+	@JsonProperty
+	public Long getMaterialId() {
+	    return materials == null ? null : materials.getMaterialId();
+	}
+	
+	@JsonProperty
+	public Long getPlacesId(){
+		return place ==null?null:place.getPlacesId();
+	}
 	@Override
 	public String toString() {
 		return "MaterialTransaction [MaterialTransactionId=" + MaterialTransactionId + ", Date=" + Date

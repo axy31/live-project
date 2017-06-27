@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIdentityReference; 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo; 
+import com.fasterxml.jackson.annotation.JsonProperty; 
 
 @Entity
 
@@ -107,7 +107,17 @@ public class MaterialPurchase {
 	public void setMaterials(Material materials) {
 		this.materials = materials;
 	}
+
+	@JsonProperty
+	public Long getProjectId() {
+	    return projects == null ? null : projects.getProjectId();
+	}
 	
+
+	@JsonProperty
+	public Long getMaterialId() {
+	    return materials == null ? null : materials.getMaterialId();
+	}
 	
 		
 }

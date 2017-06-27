@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @Entity
@@ -98,7 +99,13 @@ public class Transfer {
 	public void setMaterials(Material materials) {
 		this.materials = materials;
 	}
-
+	
+  	@JsonProperty
+	public Long getMaterialId() {
+	    return materials == null ? null : materials.getMaterialId();
+	}
+	
+		
 	@Override
     public String toString() {
         return "Transfer{" + "TransferTo=" + TransferTo + ", TransferFrom=" + TransferFrom + ", TransferDate=" + TransferDate + ", Quantity=" + Quantity + ", TransferDescription=" + TransferDescription + '}';
