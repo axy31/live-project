@@ -105,7 +105,7 @@ public class Transfer {
 	    return materials == null ? null : materials.getMaterialId();
 	}
 	
-		
+		 
 	@Override
     public String toString() {
         return "Transfer{" + "TransferTo=" + TransferTo + ", TransferFrom=" + TransferFrom + ", TransferDate=" + TransferDate + ", Quantity=" + Quantity + ", TransferDescription=" + TransferDescription + '}';

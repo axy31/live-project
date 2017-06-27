@@ -6,10 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.DAO.MaterialPurchaseDAOImpl;
-import com.project.model.Material;
-import com.project.model.MaterialPurchase;
-import com.project.model.Project;
+import com.project.DAO.MaterialPurchaseDAOImpl; 
+import com.project.model.MaterialPurchase; 
 
 
 @Service

@@ -167,7 +167,7 @@ public MaterialTransaction() {
 	public Long getMaterialId() {
 	    return materials == null ? null : materials.getMaterialId();
 	}
-	
+	 
 	@JsonProperty
 	public Long getPlacesId(){
 		return place ==null?null:place.getPlacesId();
