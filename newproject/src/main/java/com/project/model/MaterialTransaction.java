@@ -171,7 +171,7 @@ public MaterialTransaction() {
 	@JsonProperty
 	public Long getPlacesId(){
 		return place ==null?null:place.getPlacesId();
-	}
+	} 
 	@Override
 	public String toString() {
 		return "MaterialTransaction [MaterialTransactionId=" + MaterialTransactionId + ", Date=" + Date
@@ -181,7 +181,7 @@ public MaterialTransaction() {
 				+ ConsumptionToday + "]";
 	}
 	
-	
+	 
 }
 
 
