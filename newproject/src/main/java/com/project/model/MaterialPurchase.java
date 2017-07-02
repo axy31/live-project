@@ -2,8 +2,7 @@
   
 package com.project.model;
  
-import javax.persistence.Entity;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import javax.persistence.Entity; 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,8 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table; 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo; 
+import com.fasterxml.jackson.annotation.JsonBackReference; 
 import com.fasterxml.jackson.annotation.JsonProperty; 
 
 @Entity
@@ -31,13 +29,11 @@ public class MaterialPurchase {
 	
 	 @ManyToOne
 	 @JoinColumn(name = "project_id",referencedColumnName="ProjectId",nullable=false)
-	 @JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@projectId")
 	 @JsonBackReference(value="project-purchase")
-	private Project projects;
+	 private Project projects;
 	
 	 @ManyToOne
 	 @JoinColumn(name = "material_id",referencedColumnName="MaterialId",nullable=false)
-	 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "@purchaseId") 
 	 @JsonBackReference(value="material-purchase")
 	 private Material materials;
 	 

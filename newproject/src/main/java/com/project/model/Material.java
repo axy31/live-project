@@ -32,10 +32,12 @@ public class Material {
     @OneToMany(mappedBy = "materials", cascade = CascadeType.ALL)
     @JsonManagedReference(value="material-transfer")
     private Set<Transfer> transfer;
-    
+
     @OneToMany(mappedBy = "materials", cascade = CascadeType.ALL)
     @JsonManagedReference(value="material-transaction")
     private Set<MaterialTransaction> materialtransaction;
+    
+
     
     public Material() {
     }

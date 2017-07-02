@@ -48,7 +48,8 @@ public class Project {
   @JsonManagedReference(value="project-transaction")
   private Set<MaterialTransaction> materialtransaction;
   
-  
+ 
+
    // ------------------------
   // PUBLIC METHODS
   // ------------------------
